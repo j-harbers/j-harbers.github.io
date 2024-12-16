@@ -10,6 +10,7 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 header {
@@ -18,12 +19,19 @@ header {
     padding: 20px;
     text-align: center;
     border-bottom: 5px solid #388e3c; /* Christmas green */
+    position: relative;
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-family: 'Georgia', serif;
-    text-shadow: 2px 2px #8e0000; /* Subtle festive shadow */
+    text-shadow: 3px 3px #8e0000; /* Subtle festive shadow */
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% { text-shadow: 3px 3px #8e0000; }
+    100% { text-shadow: 5px 5px 15px #ffcccc; }
 }
 
 nav {
@@ -41,6 +49,8 @@ nav a {
     font-size: 1.2rem;
     font-weight: bold;
     transition: background 0.3s, transform 0.2s;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
 }
 
 nav a:hover {
@@ -65,6 +75,12 @@ button {
 button:hover {
     background-color: #ffa726; /* Darker gold */
     transform: translateY(-2px);
+    animation: sparkle 1s infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% { box-shadow: 0 0 10px gold; }
+    50% { box-shadow: 0 0 20px #ffd700; }
 }
 
 footer {
@@ -154,6 +170,12 @@ footer p {
     font-size: 2rem;
     color: gold;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    animation: star-twinkle 2s infinite;
+}
+
+@keyframes star-twinkle {
+    0%, 100% { transform: scale(1); color: gold; }
+    50% { transform: scale(1.2); color: #ffd700; }
 }
 
 /* Utility classes */
@@ -168,4 +190,10 @@ footer p {
     color: #fff;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    animation: festive-glow 3s infinite alternate;
+}
+
+@keyframes festive-glow {
+    0% { box-shadow: 0 0 10px #ffd700; }
+    100% { box-shadow: 0 0 20px #ffb74d; }
 }
