@@ -47,6 +47,29 @@
             background: #d32f2f;
             transform: scale(1.1);
         }
+        /* New Contact Button */
+        nav button {
+            background-color: #ffb74d; /* Festive gold */
+            border: none;
+            padding: 10px 20px;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+        nav button:hover {
+            background-color: #ffa726; /* Darker gold */
+            transform: translateY(-2px);
+            animation: sparkle 1s infinite;
+        }
+        @keyframes sparkle {
+            0%, 100% { box-shadow: 0 0 10px gold; }
+            50% { box-shadow: 0 0 20px #ffd700; }
+        }
+
         main {
             padding: 20px;
         }
@@ -102,7 +125,8 @@
 <nav>
     <a href="#about">About</a>
     <a href="#celebrate">Celebrate</a>
-    <a href="#contact">Contact</a>
+    <!-- Changed the Contact link to a button with JavaScript to redirect -->
+    <button onclick="window.location.href='truth-or-dare.html'">Questions</button>
 </nav>
 <main>
     <section id="about">
@@ -112,16 +136,18 @@
     <section id="celebrate">
         <h2>❄️ How to Play the Christmas Game</h2>
         <ul>
-            <li>🎄 Decorate your home with lights and ornaments</li>
-            <li>🎁 Cook a festive meal to share with loved ones</li>
-            <li>🎅 Exchange heartfelt gifts</li>
-            <li>🎶 Sing your favorite Christmas carols</li>
-            <li>⭐ Play Truth or Dare for endless laughs</li>
+            <li>🎄 Decorate your home with lights and ornaments</li
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
         </ul>
     </section>
 </main>
 <footer>
-    <p>Made with ❤️ and 🎄 for the holiday season!</p>
+    <p>Made with ❤️ and 🎄 for the holiday season!  </p>
     <p><img src="logo.png" height="100" width="80"/>
 </footer>
 </body>
